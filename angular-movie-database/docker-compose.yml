@@ -1,0 +1,19 @@
+version: "3"
+services:
+  angular:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: angular-movie-database
+    ports:
+      - 4200:4200
+    command: 'ng serve --host 0.0.0.0'
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    container_name: angular-movie-api
+    ports:
+      - 3000:3000
+    command: 'npm run api'

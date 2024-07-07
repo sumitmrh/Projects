@@ -1,0 +1,6 @@
+FROM ghcr.io/android-sdk/android-sdk:latest as android-sdk
+
+# Use the Android SDK image for your build
+FROM your-base-image
+COPY --from=android-sdk /android-sdk /android-sdk
+# Rest of your Dockerfile

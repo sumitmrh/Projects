@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  gradle:
+    image: gradle:7.6.0-jdk11
+    container_name: gradle_container
+    volumes:
+      - .:/home/gradle/project
+      - ./Fastlane:/home/gradle/project/Fastlane
+      - ./gradle:/home/gradle/project/gradle
+      - ./media:/home/gradle/project/media
+      - ./app:/home/gradle/project/app
+      - ./build.gradle:/home/gradle/project/build.gradle
+      - ./gradle.properties:/home/gradle/project/gradle.properties
+      - ./gradlew:/home/gradle/project/gradlew
+      - ./gradlew.bat:/home/gradle/project/gradlew.bat
+      - ./settings.gradle:/home/gradle/project/settings.gradle
+      - ./build.gcov.yaml:/home/gradle/project/build.gcov.yaml
+    working_dir: /home/gradle/project
+    command: gradle build
+    ports:
+      - "8080:8080"
+    environment:
+      GRADLE_USER_HOME: /home/gradle/.gradle

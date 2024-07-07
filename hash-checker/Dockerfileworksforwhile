@@ -1,0 +1,18 @@
+# Use the official Gradle image as a base
+FROM gradle:7.6.0-jdk11
+
+# Set the working directory
+WORKDIR /home/gradle/project
+
+# Copy the necessary files and directories into the container
+COPY . .
+
+# Set environment variable
+#ENV GRADLE_USER_HOME=/home/gradle/.gradle
+# Set environment variable
+ENV GRADLE_USER_HOME=/home/gradle/.gradle
+ENV HTTP_PROXY=http://your-proxy-server:port
+ENV HTTPS_PROXY=http://your-proxy-server:port
+
+# Run the Gradle build command
+CMD ["gradle", "build"]

@@ -1,0 +1,17 @@
+FROM gradle:7.6-jdk11
+WORKDIR /app
+COPY . .
+# Set the ANDROID_HOME environment variable
+ENV ANDROID_HOME=/android-sdk
+
+# Copy the Android SDK to the container
+COPY --from=android-sdk /android-sdk /android-sdk
+
+# Create the local.properties file
+RUN echo "sdk.dir=/android-sdk" > /app/local.properties
+
+# Run the Gradle build command
+RUN gradle build
+
+RUN gradle build
+CMD ["gradle", "run"]

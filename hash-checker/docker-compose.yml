@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  gradle:
+    build: .
+    container_name: gradle_container
+    volumes:
+      - .:/home/gradle/project
+    working_dir: /home/gradle/project
+    command: gradle build
+    ports:
+      - "8080:8080"
+    environment:
+      GRADLE_USER_HOME: /home/gradle/.gradle
+      ANDROID_HOME: /usr/local/android-sdk-linux

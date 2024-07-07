@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ANDROID_HOME: /android-sdk
+    volumes:
+      - ./local.properties:/app/local.properties
+      - ./android-sdk:/android-sdk
+      - ./gradle:/app/gradle
+      - ./gradle.properties:/app/gradle.properties
+      - ./gradlew:/app/gradlew
+      - ./gradlew.bat:/app/gradlew.bat
+      - ./settings.gradle:/app/settings.gradle
+      - ./build.gradle:/app/build.gradle
+      - ./CONTRIBUTING.md:/app/CONTRIBUTING.md
+      - ./CHANGELOG.md:/app/CHANGELOG.md
+      - ./CODE_OF_CONDUCT.md:/app/CODE_OF_CONDUCT.md
+      - ./codecov.yaml:/app/codecov.yaml
+    command: ./gradlew build
