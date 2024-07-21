@@ -8,32 +8,4 @@ Slack again trying now.
 Slack again trying now with new hook
 Slack again trying now. 
 Slack again trying now with new hook
-added
-Test again 
-change again. 
-check kan 2 only
-Now or Sumaharjan project
-Slack test again.
-Slack again trying now. 
-Slack again trying now with new hook
-Slack again trying now. 
-Slack again trying now with new hookadded
-Test again 
-change again. 
-check kan 2 only
-Now or Sumaharjan project
-Slack test again.
-Slack again trying now. 
-Slack again trying now with new hook
-Slack again trying now. 
-Slack again trying now with new hook
-added
-Test again 
-change again. 
-check kan 2 only
-Now or Sumaharjan project
-Slack test again.
-Slack again trying now. 
-Slack again trying now with new hook
-Slack again trying now. 
-Slack again trying now with new hook
+Slack again trying now with new hook with only 1 hook.
