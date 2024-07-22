@@ -12,3 +12,6 @@ Slack again trying now with new hook with only 2 hook.
 Now checking commit message on slack. 
 Checking two messages.
 Checking again.
+
+Checking again.
+Checking again.
