@@ -10,3 +10,4 @@ Slack again trying now.
 Slack again trying now with new hook
 Slack again trying now with new hook with only 2 hook.
 Now checking commit message on slack. 
+Checking two messages.
